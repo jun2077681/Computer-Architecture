@@ -1,0 +1,42 @@
+library verilog;
+use verilog.vl_types.all;
+entity idtoex is
+    port(
+        clk             : in     vl_logic;
+        reset           : in     vl_logic;
+        alucontrol_id   : in     vl_logic_vector(3 downto 0);
+        memtoreg_id     : in     vl_logic;
+        memwrite_id     : in     vl_logic;
+        alusrc_id       : in     vl_logic;
+        regdst_id       : in     vl_logic;
+        regwrite_id     : in     vl_logic;
+        signimm_id      : in     vl_logic_vector(31 downto 0);
+        pcplus4_id      : in     vl_logic_vector(31 downto 0);
+        srca_id         : in     vl_logic_vector(31 downto 0);
+        writedata_id    : in     vl_logic_vector(31 downto 0);
+        branch_id       : in     vl_logic;
+        branchnot_id    : in     vl_logic;
+        shiftl16_id     : in     vl_logic;
+        jump_id         : in     vl_logic;
+        pc_id           : in     vl_logic_vector(31 downto 0);
+        instr_id        : in     vl_logic_vector(31 downto 0);
+        jrcontrol_id    : in     vl_logic;
+        alucontrol_ex   : out    vl_logic_vector(3 downto 0);
+        memtoreg_ex     : out    vl_logic;
+        memwrite_ex     : out    vl_logic;
+        alusrc_ex       : out    vl_logic;
+        regdst_ex       : out    vl_logic;
+        regwrite_ex     : out    vl_logic;
+        signimm_ex      : out    vl_logic_vector(31 downto 0);
+        pcplus4_ex      : out    vl_logic_vector(31 downto 0);
+        srca_ex         : out    vl_logic_vector(31 downto 0);
+        writedata_ex    : out    vl_logic_vector(31 downto 0);
+        branch_ex       : out    vl_logic;
+        branchnot_ex    : out    vl_logic;
+        shiftl16_ex     : out    vl_logic;
+        jump_ex         : out    vl_logic;
+        pc_ex           : out    vl_logic_vector(31 downto 0);
+        instr_ex        : out    vl_logic_vector(31 downto 0);
+        jrcontrol_ex    : out    vl_logic
+    );
+end idtoex;
